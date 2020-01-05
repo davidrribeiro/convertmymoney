@@ -1,0 +1,24 @@
+<%- include ('header') %>
+    
+<div class="container">
+    <div class="logo">
+        <a href="/">
+            <img src="images/logo.png"/>
+        </a>
+    </div>
+    <div class="content">
+        <div class="result">
+            <% if(error) { %>
+                <%= error %>
+            <% } else{ %>
+                <%= quantidade %> dólares na cotação
+                <%= cotacao %> é igual a: <%= conversao %> dólares
+            <% } %>
+            
+        </div>
+    </div>
+   
+    
+</div>
+
+<%- include ('footer') %>

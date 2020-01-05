@@ -43,3 +43,6 @@
     cursor: pointer;
     margin-top: 30px;
 }
+.content .result{
+    text-align: center;
+}
