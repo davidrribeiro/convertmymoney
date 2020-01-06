@@ -36,7 +36,7 @@ app.get('/cotacao', (req, res) =>{
     
 })
 
-init()
+
 app.listen(port, (err) => {
     if(err) {
         console.log('Não foi possível iniciar o servidor')
