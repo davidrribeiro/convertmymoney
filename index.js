@@ -3,7 +3,7 @@ const app = express()
 const path = require('path')
 const routes = require('./routes');
 
-
+const port = process.env.PORT || 3000
 
 
 app.set('view engine', 'ejs')
@@ -12,10 +12,11 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 app.use('/', routes);
 
-app.listen(3000, err =>{
-    if(err){
-        console.log('Não foi possível conectar ao servidor.')
-    }else{
-        console.log('Servidor conectado')
+init()
+app.listen(port, (err) => {
+    if(err) {
+        console.log('Não foi possível iniciar o servidor')
+    } else {
+        console.log('Servidor rodando')
     }
 })
